@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>dls</string>
+	</array>
+	<key>name</key>
+	<string>DLX</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Registers like r1, r2, or r27</string>
+			<key>match</key>
+			<string>\br[0-9][0-9]?</string>
+			<key>name</key>
+			<string>variable.parameter.dlx</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Assembler directives</string>
+			<key>match</key>
+			<string>\.(abs|align|ascii|byte|byteu|equ|export|half|halfu|import|org|seg|set|space|start|word|wordu)\b</string>
+			<key>name</key>
+			<string>support.function.source.dlx</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>DLX core and psuedo instructions</string>
+			<key>match</key>
+			<string>\b(add|addd|addf|addi|addu|addui|and|andi|beqz|bf|bfpf|bfpt|bnez|bt|clr|cvtd2f|cvtd2i|cvtf2d|cvtf2i|cvti2d|cvti2f|div|divi|divd|divf|divu|divui|eqd|eqf|ged|gef|gtd|gtf|halt|j|jal|jalr|jr|lb|lbu|ld|led|lef|lf|lh|lhi|lhu|ltd|ltf|lw|mov|movd|movf|movfp2i|movi|movi2fp|movi2s|movs2i|movui|mult|multi|multd|multf|multu|multui|ned|nef|neg|nop|or|ori|rfe|sb|sbu|sd|seq|seqi|sequ|sequi|sf|sge|sgei|sgeu|sgeui|sgt|sgti|sgtu|sgtui|sh|shu|sla|slai|sle|slei|sleui|sll|slli|slt|slti|sltu|sltui|sne|snei|sneu|sneui|sra|srai|srl|srli|sub|subd|subf|subi|subu|subui|sw|trap|wait|xor|xori)\b</string>
+			<key>name</key>
+			<string>support.function.source.dlx</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Numbers like -3, 55, 16#3F</string>
+			<key>match</key>
+			<string>\s((16#[0-9A-Fa-f]+)|((-)?[0-9]+))\b</string>
+			<key>name</key>
+			<string>constant.numeric.dlx</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Labels at line start: begin_repeat: add ... (the colon is optional)</string>
+			<key>match</key>
+			<string>^[\w]+:?\s</string>
+			<key>name</key>
+			<string>meta.function.dlx</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Comment until end of line, staring with ';'</string>
+			<key>match</key>
+			<string>;(.)*$</string>
+			<key>name</key>
+			<string>comment.line.source.dlx</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.dlx</string>
+	<key>uuid</key>
+	<string>eeafe3eb-60ca-4cf6-837d-b5ca5029353e</string>
+</dict>
+</plist>
